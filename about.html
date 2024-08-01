@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .nav {
+            background-color: rgba(51, 51, 51, 0.8);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .nav .logo {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav .menu a {
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav .menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            padding: 80px 20px 20px 20px; /* added top padding to account for fixed nav */
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .photo-placeholder {
+         	width: 100%;
+            height: 718px;
+            background-color: #ddd;
+            margin: 0 auto 20px auto;
+        }
+
+        .about-me {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .projects-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .projects {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            min-width: calc(33.333% - 40px);
+            box-sizing: border-box;
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        .project img {
+            width: 100%;
+            height: 150px;
+            background-color: #ddd;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .project a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .nav-button.prev {
+            left: 0;
+        }
+
+        .nav-button.next {
+            right: 0;
+        }
+
+        .contact {
+            background-color: #333;
+            color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact a {
+            color: #f2f2f2;
+            text-decoration: none;
+			
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                min-width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html" class="logo">MyLogo</a>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="photo-placeholder"><img src="img/about_img.png" width="1280" height="718" alt=""/>
+		</div>
+        <div class="about-me" id="about">
+            <h2>About Me</h2>
+            <p>
+				Hello! My name is Yulia, and I am a professional visualizer. My passion lies in helping architects and private clients bring their interior and exterior designs to life through high-quality visualization. With my expertise, you can see your design come to life before the construction or renovation even begins
+			<br>
+				I have extensive experience working with private architects, design studios, and individual clients. My work ensures that every detail of your vision is captured and presented with clarity and precision. Whether you are planning a renovation or starting a new construction project, I am here to assist you in visualizing your dream space. Thank you for visiting my portfolio. I look forward to the opportunity to collaborate with you and bring your design ideas to life.</p>
+        </div>
+
+        <div class="projects-container" id="projects">
+            <button class="nav-button prev" onclick="scrollProjects(-1)">&#10094;</button>
+            <div class="projects">
+                <div class="project">
+                    <img src="/img/project1_small.png" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Short description of Project 1.</p>
+                    <a href="project1.html">Read More</a>
+                </div>
+                <div class="project">
+                    <img src="/img/project1_small.png" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Short description of Project 2.</p>
+                    <a href="project2.html">Read More</a>
+                </div>
+                <div class="project">
+                    <img src="/img/project1_small.png" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>Short description of Project 3.</p>
+                    <a href="project3.html">Read More</a>
+                </div>
+				<div class="project">
+                    <img src="/img/project1_small.png" alt="Project 4">
+                    <h3>Project 4</h3>
+                    <p>Short description of Project 4.</p>
+                    <a href="project4.html">Read More</a>
+                </div>
+				<div class="project">
+                    <img src="/img/project1_small.png" alt="Project 5">
+                    <h3>Project 5</h3>
+                    <p>Short description of Project 5.</p>
+                    <a href="project4.html">Read More</a>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+            <button class="nav-button next" onclick="scrollProjects(1)">&#10095;</button>
+        </div>
+    </div>
+
+	<div class="contact" id="contact">
+      <p> Phone: +420 773 140 853   
+        Instagram: <a href="https://www.https://www.instagram.com/gj_interiorvisualization/" target="_blank"> @gj_interiorvisualization </a>   
+        Behance: <a href="https://www.https://www.behance.net/juliagrischenko" target="_blank">juliagrischenko</a> </p>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+
+        function scrollProjects(direction) {
+            const projectsContainer = document.querySelector('.projects');
+            const projects = document.querySelectorAll('.project');
+            const projectWidth = projects[0].offsetWidth + 20; // Including margin
+
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            } else if (currentIndex > projects.length - 3) {
+                currentIndex = projects.length - 3;
+            }
+
+            projectsContainer.style.transform = `translateX(-${currentIndex * projectWidth}px)`;
+        }
+
+        function handleWheel(event) {
+            if (event.deltaY > 0) {
+                scrollProjects(1);
+            } else {
+                scrollProjects(-1);
+            }
+        }
+
+        document.querySelector('.projects-container').addEventListener('wheel', handleWheel);
+    </script>
+</body>
+</html>
